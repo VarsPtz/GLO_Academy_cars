@@ -1,7 +1,8 @@
-const score = document.querySelectorAll('.score'),
-   start = document.querySelector('.start'),
-   gameArea = document.querySelector('.gameArea'),
-   car = document.createElement('div');
+const score = document.querySelectorAll(".score"),
+  start = document.querySelector(".start"),
+  gameArea = document.querySelector(".gameArea"),
+  audioTrack = document.querySelector("#audio__main__theme"),
+  car = document.createElement("div");
    
 const divGEBC = document.getElementsByClassName('div');
 
@@ -29,6 +30,7 @@ function startGame() {
  start.classList.add('hide');
  setting.start = true;
  gameArea.appendChild(car);
+ audioTrack.src='../audio/riders.mp3';
  requestAnimationFrame(playGame); 
 }
 
