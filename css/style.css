@@ -1,0 +1,46 @@
+body {
+ background: #ffffff;
+ position: relative;
+ margin: 0;
+ padding: 0;
+}
+
+.start {
+ display: block;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ color: white;
+ font-size: 24px;
+ font-weight: bold;
+ background-color: green;
+ max-width: 300px;
+ padding: 20px 30px;
+ text-align: center;
+ border-radius: 15px;
+ border: 2px solid #ffffff;
+}
+
+.start:hover {
+ cursor: pointer;
+}
+
+.hide {
+ display: none;
+}
+
+.car {
+ width: 50px;
+ height: 100px;
+ background: transparent url('../image/player-3.png') center / cover no-repeat;
+}
+
+.gameArea {
+ width: 500px;
+ height: 100vh;
+ margin: 0 auto;
+ border-left: 5px solid #222222;
+ border-right: 5px solid #222222;
+ background-color: grey;
+}
