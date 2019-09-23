@@ -8,6 +8,10 @@ const divGEBC = document.getElementsByClassName('div');
 
 car.classList.add('car');
 
+window.onload = function() {
+  audioTrack.play();
+};
+
 start.addEventListener('click', startGame);
 document.addEventListener('keydown', startRun);
 document.addEventListener('keyup', stopRun);
