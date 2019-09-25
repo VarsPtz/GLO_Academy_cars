@@ -1,4 +1,5 @@
 const score = document.querySelector(".score"),
+  bestScore = document.querySelector(".best-score"),
   start = document.querySelector(".start"),
   gameArea = document.querySelector(".gameArea"),
   audioTrack = document.querySelector("#audio__main__theme"),
@@ -40,21 +41,23 @@ const setting = {
 
 function setLevelEasy() {  
   setting.speed = 10;
-  menuLevels.classList.add('hide');
-  start.classList.remove('hide');
-
+  newGame();
 }
 
 function setLevelNormal() {
   setting.speed = 15;
-  menuLevels.classList.add("hide");
-  start.classList.remove("hide");
+  newGame();
 }
 
 function setLevelHard() {
   setting.speed = 25;
+  newGame();
+}
+
+function newGame() {
   menuLevels.classList.add("hide");
   start.classList.remove("hide");
+  bestScore.classList.add("hide");
 }
 
 
@@ -157,6 +160,11 @@ function moveEnemy() {
       carRect.bottom >= enemyRect.top) {
         setting.start = false;
         menuLevels.classList.remove('hide');
+        if (localStorage.getItem("bestResult") < setting.score) {
+          localStorage.setItem("bestResult", setting.score);
+          bestScore.innerHTML = `Congratulations! <br> You have the best score: ${setting.score}`;
+          bestScore.classList.remove('hide');
+        }
     }
     item.y += setting.speed / 2;
     item.style.top = item.y + 'px';

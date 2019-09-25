@@ -208,6 +208,24 @@ body {
  font-weight: 500;
 }
 
+.best-score {
+ position: absolute;
+ top: 100px;
+ right: 20px;
+ width: 200px;
+ height: 70px;
+ border: 5px solid skyblue;
+ background-color: skyblue;
+ border-radius: 5px;
+ padding: 1rem 1rem;
+ z-index: 200;
+ font-size: 1.5rem;
+ color: #ffffff;
+ font-family: sans-serif;
+ font-weight: 500;
+ text-align: center;
+}
+
 .menu-levels {
  display: flex;
  justify-content: space-evenly;
